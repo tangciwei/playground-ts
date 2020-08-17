@@ -1,4 +1,4 @@
-function debounce(fn: Function, timeout: number) {
+export function debounce(fn: Function, timeout: number) {
     let timer = null;
     return (...arg) => {
         clearTimeout(timer);
@@ -9,7 +9,7 @@ function debounce(fn: Function, timeout: number) {
     }
 }
 
-function throttle(fn: Function, timeout) {
+export function throttle(fn: Function, timeout) {
     let timer = null;
     return (...arg) => {
         if (timer) {
